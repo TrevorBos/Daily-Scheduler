@@ -65,21 +65,34 @@ $(document).ready(function () {
     // We now want to convert the hours in our array into the 24hour format
     var hours = parseInt(currentHour);
     if (element.includes("PM")) {
-        var elementHour = parseInt(element)+12;
-    }else{
-        elementHour = parseInt (element);
+      var elementHour = parseInt(element) + 12;
+    } else {
+      elementHour = parseInt(element);
     }
     // Assign colors to each box based off the time
     if (hours > elementHour) {
-        textInfo.addClass("past");
-    }else if (hours < elementHour) {
-        textInfo.addClass("future");
-    }else if (hours === elementHour) {
-        textData.addClass("present")
+      textInfo.addClass("past");
+    } else if (hours < elementHour) {
+      textInfo.addClass("future");
+    } else if (hours === elementHour) {
+      textData.addClass("present");
     }
 
     // Render saved information on refresh
+    textInfo.val(userTextArray[index]);
+
+    timeRow.append(timeData, textInfo, saveInfo);
+    $(".container").append(timeRow);
 
     // Save the information to the array and then to the local storage.
+    saveInfo.on("click", function(event){
+        event.preventDefault();
+
+        var userText = textInfo.val();
+
+        userTextArray[index] = userText;
+        
+        saveInputArray();
+    })
   });
 });
