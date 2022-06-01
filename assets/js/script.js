@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   // Loop, most likely a forEach type, to loop through and create the rows for every hour on the plan
 
-  rowArray.forEach(function (element, index) {
+  hoursArray.forEach(function (element, index) {
     //declare variables needed to set up the rows
     var timeRow = $("<tr>");
     var timeData = $("<td>");
