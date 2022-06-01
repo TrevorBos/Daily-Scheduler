@@ -1,4 +1,4 @@
-# Daily Scheduler - Trevor Bos
+# Work Day Scheduler - Trevor Bos
 Challenge 5
 
 ## Purpose
