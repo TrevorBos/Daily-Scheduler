@@ -50,7 +50,7 @@ $(document).ready(function () {
 
   // Loop, most likely a forEach type, to loop through and create the rows for every hour on the plan
 
-  rowArray.forEach(function()){
+  rowArray.forEach(function(){
       //declare variables needed to set up the rows
       var timeRow = $("<tr>");
       var timeData =  $("<td>");
@@ -61,6 +61,20 @@ $(document).ready(function () {
       timeRow.addClass("row");
       timeData.addClass("hour");
       textInfo.addClass("textarea");
-      saveInfo.addClass("saveBtn fas fa-save")
-  }
+      saveInfo.addClass("saveBtn fas fa-save");
+
+    //   We now want to convert the hours in our array into the 24hour format
+
+
+    // Assign colors to each box based off the time
+
+
+    // Render saved information on refresh
+
+
+    //Save the information to the array and then to the local storage.
+
+    
+  })
+
 });
