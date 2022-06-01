@@ -52,6 +52,15 @@ $(document).ready(function () {
 
   rowArray.forEach(function()){
       //declare variables needed to set up the rows
-      
+      var timeRow = $("<tr>");
+      var timeData =  $("<td>");
+      var textInfo = $("<input>");
+      var saveInfo = $("<button>");
+
+      //adding classes to each element of the row, also giving them some specific styling to go along with it
+      timeRow.addClass("row");
+      timeData.addClass("hour");
+      textInfo.addClass("textarea");
+      saveInfo.addClass("saveBtn fas fa-save")
   }
 });
