@@ -13,19 +13,17 @@ $(document).ready(function () {
   var userTextArray = [];
   // Array for the work day hours (might go a couple hours before and after for other scheduling fun)
   var hoursArray = [
-    "7 AM",
     "8 AM",
     "9 AM",
     "10 AM",
     "11 AM",
-    "12 PM",
+    "12 AM",
     "1 PM",
     "2 PM",
     "3 PM",
     "4 PM",
     "5 PM",
     "6 PM",
-    "7 PM",
   ];
 
   //Sets the currentDay variable to the text version of dayTimeDisplay
@@ -69,13 +67,16 @@ $(document).ready(function () {
     } else {
       elementHour = parseInt(element);
     }
+
+    console.log(hours);
+    console.log(elementHour);
     // Assign colors to each box based off the time
     if (hours > elementHour) {
       textInfo.addClass("past");
     } else if (hours < elementHour) {
       textInfo.addClass("future");
     } else if (hours === elementHour) {
-      textData.addClass("present");
+      textInfo.addClass("present");
     }
 
     // Render saved information on refresh
@@ -95,5 +96,4 @@ $(document).ready(function () {
       saveInputArray();
     });
   });
-
 });
