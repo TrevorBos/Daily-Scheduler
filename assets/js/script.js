@@ -49,4 +49,9 @@ $(document).ready(function () {
   }
 
   // Loop, most likely a forEach type, to loop through and create the rows for every hour on the plan
+
+  rowArray.forEach(function()){
+      //declare variables needed to set up the rows
+      
+  }
 });
