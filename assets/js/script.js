@@ -25,7 +25,7 @@ $(document).ready(function () {
     "4 PM",
     "5 PM",
     "6 PM",
-    "7 PM",
+    "7 PM"
   ];
 
   //Sets the currentDay variable to the text version of dayTimeDisplay
@@ -52,7 +52,7 @@ $(document).ready(function () {
   hoursArray.forEach(function (element, index) {
     //declare variables needed to set up the rows
     var timeRow = $("<tr>");
-    var timeData = $("<td>");
+    var timeData = $("<td>").text(element);
     var textInfo = $("<input>");
     var saveInfo = $("<button>");
 
