@@ -25,7 +25,7 @@ $(document).ready(function () {
     "4 PM",
     "5 PM",
     "6 PM",
-    "7 PM"
+    "7 PM",
   ];
 
   //Sets the currentDay variable to the text version of dayTimeDisplay
@@ -85,14 +85,15 @@ $(document).ready(function () {
     $(".container").append(timeRow);
 
     // Save the information to the array and then to the local storage.
-    saveInfo.on("click", function(event){
-        event.preventDefault();
+    saveInfo.on("click", function (event) {
+      event.preventDefault();
 
-        var userText = textInfo.val();
+      var userText = textInfo.val();
 
-        userTextArray[index] = userText;
-        
-        saveInputArray();
-    })
+      userTextArray[index] = userText;
+
+      saveInputArray();
+    });
   });
+
 });
